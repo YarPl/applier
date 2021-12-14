@@ -1,0 +1,62 @@
+﻿1. Обновление npm
+
+     npm install -g npm@latest
+     npm install npm@latest -g
+
+
+
+2. Список npm пакетов установленных локально/глобально
+
+     npm list -g --depth=0
+
+   …где “-g” - показать глобальные пакеты
+
+
+     dir *express*.* /s - поиск файлов по имени и маске
+
+   …где
+
+     dir – команда отобразить список файлов и директорий
+     * – что-то там… (ну забыл я, мол)
+     . – расширение файла
+     /s – команда на поиск в текущей директории и подкаталогах.
+
+
+
+3. Cписок установленных пакетов, которые требуют обновления
+
+     npm outdated -g --depth=0    - покажет список установленных пакетов, которые требуют обновления.
+     npm update -g <package name> - обновить конкретный пакет
+
+
+
+4. Установка модуля для интеграции с базой данных PostgreSQL
+
+     npm install pg-promise
+     npm -g install pg-promise (Устанавливается в C:\Users\Yaroslav\AppData\Roaming\npm\node_modules в Windows 10)
+
+
+
+5. Установка фреймворка express для создания сервера на NodeJS
+
+     npm install express
+     npm -g install express
+
+
+
+6. Версия пакета
+
+     npm list -g <имя_пакета>       - Посмотреть версию установленного пакета
+     npm view <имя_пакета> version  - Посмотреть последнюю версию пакета в репозитарии npm (которая устанавливается по npm i)
+
+
+
+7. Home page of a package
+
+     npm home <имя_пакета>
+
+
+
+8. Удаление пакета
+
+     npm uninstall -g <package name>
