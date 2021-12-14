@@ -1,0 +1,20 @@
+1. Устанавливаем Node.js
+2. Скачиваем ChromeDriver - https://chromedriver.chromium.org/downloads
+3. Компьютер > Свойства > Дополнительные параметры системы > Переменные среды... > Системные переменные > Path
+4. В конце прописываем путь к папке с ChromeDriver.exe 
+          Пример:  .....;C:\Users\Yaroslav\Desktop\Automation\WebDrivers\ChromeDriver
+5. Открываем консоль npm
+6. Прописываем: npm install -g selenium-webdriver
+
+
+Для запуска теста:
+
+cd C:\Users\Yaroslav\Desktop\Automation\Documentation   //путь к папке с авто-тестом
+node
+.load template.js 
+
+
+or
+
+cd C:\Users\Yaroslav\Desktop\Automation\Documentation   //путь к папке с авто-тестом
+node template.js 

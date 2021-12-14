@@ -1,0 +1,101 @@
+{
+
+  "storage_enrichment" : [
+    {"id": "CaseID", "title": "CaseID"},
+    {"id": "DeloNum", "title": "DeloNum"},
+    {"id": "ActivityType", "title": "ActivityType"},      
+    {"id": "Grantor", "title": "Grantor"}
+  ],
+
+  "manhunter_recovery": [ 
+    {"id": "CaseID", "title": "CaseID"},
+    {"id": "DeloNum", "title": "DeloNum"},
+    {"id": "ActivityType", "title": "ActivityType"},      
+    {"id": "Grantor", "title": "Grantor"}
+  ],
+  
+  "manhunter_ready": [ 
+    {"id": "CaseID", "title": "CaseID"},
+    {"id": "DeloNum", "title": "DeloNum"},
+    {"id": "ActivityType", "title": "ActivityType"},      
+    {"id": "Grantor", "title": "Grantor"},
+    {"id": "ComplainedMarshal", "title": "ComplainedMarshal"},
+    {"id": "Suspended", "title": "Suspended"}
+  ],
+
+  "manhunter_failed": [ 
+    {"id": "CaseID", "title": "CaseID"},
+    {"id": "DeloNum", "title": "DeloNum"},
+    {"id": "ActivityType", "title": "ActivityType"},      
+    {"id": "Grantor", "title": "Grantor"},
+    {"id": "skipReason", "title": "skipReason"}
+  ],
+
+  "experience": [ 
+    {"id": "RecognizedByMachine", "title": "RecognizedByMachine"},
+    {"id": "RecognizedByHuman", "title": "RecognizedByHuman"},    
+    {"id": "Precedence", "title": "Precedence"},
+    {"id": "PositivePrecedence", "title": "PositivePrecedence"},
+    {"id": "NegativePrecedence", "title": "NegativePrecedence"}
+  ],
+
+  "raw_verified" : [
+    {"id": "CaseID", "title": "CaseID"},
+    {"id": "DeloNum", "title": "DeloNum"},
+    {"id": "ActivityType", "title": "ActivityType"},      
+    {"id": "Grantor", "title": "Grantor"},
+    {"id": "ComplainedMarshal", "title": "ComplainedMarshal"},
+    {"id": "ComplainedSurname", "title": "ComplainedSurname"},
+    {"id": "ComplainedName", "title": "ComplainedName"},
+    {"id": "ComplainedMiddlename", "title": "ComplainedMiddlename"},
+    {"id": "Suspended", "title": "Suspended"}
+  ],
+
+  "applier_recovery" : [
+    {"id": "CaseID", "title": "CaseID"},
+    {"id": "DeloNum", "title": "DeloNum"},
+    {"id": "ActivityType", "title": "ActivityType"},      
+    {"id": "Grantor", "title": "Grantor"},
+    {"id": "ComplainedMarshal", "title": "ComplainedMarshal"},
+    {"id": "ComplainedSurname", "title": "ComplainedSurname"},
+    {"id": "ComplainedName", "title": "ComplainedName"},
+    {"id": "ComplainedMiddlename", "title": "ComplainedMiddlename"},
+    {"id": "Suspended", "title": "Suspended"}
+  ],
+
+  "applier_ready" : [
+    {"id": "CaseID", "title": "CaseID"},
+    {"id": "DeloNum", "title": "DeloNum"},
+    {"id": "ActivityType", "title": "ActivityType"},      
+    {"id": "Grantor", "title": "Grantor"},
+    {"id": "ComplainedMarshal", "title": "ComplainedMarshal"},
+    {"id": "ComplainedSurname", "title": "ComplainedSurname"},
+    {"id": "ComplainedName", "title": "ComplainedName"},
+    {"id": "ComplainedMiddlename", "title": "ComplainedMiddlename"},
+    {"id": "ApplicationID", "title": "ApplicationID"},
+    {"id": "ServiceType", "title": "ServiceType"},
+    {"id": "ApplicationDate", "title": "ApplicationDate"},
+    {"id": "Status", "title": "Status"},
+    {"id": "StatusLastUpdated", "title": "StatusLastUpdated"},
+    {"id": "Submission", "title": "Submission"},
+    {"id": "Region", "title": "Region"},
+    {"id": "Unit", "title": "Unit"},
+    {"id": "DirectLink", "title": "DirectLink"},
+    {"id": "Suspended", "title": "Suspended"},
+    {"id": "Claimant", "title": "Claimant"}
+  ],
+
+  "applier_failed" : [
+    {"id": "CaseID", "title": "CaseID"},
+    {"id": "DeloNum", "title": "DeloNum"},
+    {"id": "ActivityType", "title": "ActivityType"},      
+    {"id": "Grantor", "title": "Grantor"},
+    {"id": "ComplainedMarshal", "title": "ComplainedMarshal"},
+    {"id": "ComplainedSurname", "title": "ComplainedSurname"},
+    {"id": "ComplainedName", "title": "ComplainedName"},
+    {"id": "ComplainedMiddlename", "title": "ComplainedMiddlename"},
+    {"id": "skipReason", "title": "skipReason"},
+    {"id": "Suspended", "title": "Suspended"}
+  ]
+
+}

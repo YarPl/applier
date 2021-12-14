@@ -1,0 +1,2 @@
+node transmitter.js
+cmd

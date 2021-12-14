@@ -1,0 +1,2 @@
+node sieve.js
+cmd

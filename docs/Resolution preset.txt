@@ -1,0 +1,8 @@
+const screen = {
+  width: 1920,
+  height: 1080
+};
+
+const chrome = require('selenium-webdriver/chrome');
+
+let driver = new webdriver.Builder().forBrowser('chrome').setChromeOptions(new chrome.Options().headless().windowSize(screen)).build();

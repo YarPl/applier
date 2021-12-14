@@ -1,0 +1,2 @@
+node manhunter.js
+cmd
