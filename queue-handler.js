@@ -1,6 +1,6 @@
 const newLineChar = process.platform === 'win32' ? '\r\n' : '\n';
 
-const fs      = require('fs');
+const fs = require('fs');
 
 
 module.exports.TestEmptyQue = function (directory_path) {

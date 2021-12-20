@@ -47,8 +47,8 @@ fs.readFile(__dirname + "/users.json", "utf8", function (error, users) {
 
         user = new user_configurator(users[userIndex]);
         users[userIndex]["isFree"] = false;
-        fs.writeFileSync(__dirname + "/users.json", JSON.stringify(users));
 
+        fs.writeFileSync(__dirname + "/users.json", JSON.stringify(users));
         console.log(`${newLineChar}'${user.claimant}' status was successfully updated!`);
     
     }
@@ -713,15 +713,19 @@ fs.readFile(__dirname + "/users.json", "utf8", function (error, users) {
 
 
         fs.readFile(__dirname + "/users.json", "utf8", function (error, users) {
-    
+            
             if (error) throw error;
     
-            users = JSON.parse(users);
-            users[userIndex]["isFree"] = true;
-            
-            fs.writeFileSync(__dirname + "/users.json", JSON.stringify(users));
-            
-            console.log(`${newLineChar}'${user.claimant}' status was successfully updated!`);
+            if (userIndex !== -1) {
+                
+                users = JSON.parse(users);
+                users[userIndex]["isFree"] = true;
+                
+                fs.writeFileSync(__dirname + "/users.json", JSON.stringify(users));
+                console.log(`${newLineChar}'${user.claimant}' status was successfully updated!`);
+    
+            }
+        
         });
     
     }

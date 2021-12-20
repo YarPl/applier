@@ -114,8 +114,6 @@ module.exports.file_structure = {
     PoA_RSC        : 'PoA_RSC.pdf',
     enquiry_RSC    : 'enquiry_RSC.txt',
 
-    users_list     : 'users.json' 
-
 };
 
 
