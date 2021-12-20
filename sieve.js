@@ -9,7 +9,6 @@ const csv_handler  = require('./csv-handler.js');
 const fs           = require('fs');
 const Emitter      = require("events");
 
-
 let emitter = new Emitter();
  
 
@@ -71,14 +70,10 @@ fs.readdir(options.directory_tree.raw_data_path, { withFileTypes: true }, functi
         raw_data_directory_files.forEach(async (fileName) => {
             
             let file_content = await csv_handler.csv_parser(options.directory_tree.raw_data_path + fileName);
-
-            console.log(file_content)
             
             let purified_file_content = file_content.map((el) => {
                 return data_cleaner.purifier(el)
             });
-
-            console.log(purified_file_content)
 
             let opened_proceedings = [], closed_proceedings = [];
 

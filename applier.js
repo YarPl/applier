@@ -36,19 +36,18 @@ emitter.on("done", function (path_to_csv_file, csv_headers, array_of_objects, pa
 
 
 
-fs.readFile("users.json", "utf8", function (error, users) {
+fs.readFile(__dirname + "/users.json", "utf8", function (error, users) {
     
     if (error) throw error;
 
     users     = JSON.parse(users);
-    
     userIndex = users.findIndex(user => user.isFree === true);
     
     if (userIndex !== -1) {
 
         user = new user_configurator(users[userIndex]);
         users[userIndex]["isFree"] = false;
-        fs.writeFileSync("users.json", JSON.stringify(users));
+        fs.writeFileSync(__dirname + "/users.json", JSON.stringify(users));
 
         console.log(`${newLineChar}'${user.claimant}' status was successfully updated!`);
     
@@ -67,9 +66,9 @@ fs.readFile("users.json", "utf8", function (error, users) {
         driver = selenium_configurator.operatingMode(options.operatingMode);
 
         await driver.manage().window().maximize();
-
         
-        if (userIndex === -1) console.log(`${newLineChar}All operators are currently unavailable!`);
+
+        if (userIndex === -1) console.log(`${newLineChar}All users are currently unavailable!`);
 
         if ((TestEmptyQue(options.directory_tree.verified_data_path) || cache.has("old_fileName")) && userIndex !== -1) {
      
@@ -638,7 +637,7 @@ fs.readFile("users.json", "utf8", function (error, users) {
        
             }
         }
-        
+
         let emptiness = ["", "[]", "{}", "[{}]", undefined, null];
         
         if (emptiness.includes(JSON.stringify(await csv_handler.csv_parser(options.directory_tree.verified_data_path + processingFile)))) {
@@ -653,6 +652,7 @@ fs.readFile("users.json", "utf8", function (error, users) {
             })
         }
         
+
         if (fs.existsSync(options.directory_tree.output_path + inter_process_file)) {
 
             let prefix = uuid.v4();
@@ -679,21 +679,26 @@ fs.readFile("users.json", "utf8", function (error, users) {
         cache.clear();
 
         console.timeEnd(`${newLineChar}Заявления поданы за`);
-
+        
     }
 
-    fs.readFile("users.json", "utf8", function (error, users) {
+
+    fs.readFile(__dirname + "/users.json", "utf8", function (error, users) {
             
         if (error) throw error;
-        
-        users = JSON.parse(users);
-        
-        users[userIndex]["isFree"] = true;
-        fs.writeFileSync("users.json", JSON.stringify(users));
+
+        if (userIndex !== -1) {
             
-        console.log(`${newLineChar}'${user.claimant}' status was successfully updated!`);
-    });
+            users = JSON.parse(users);
+            users[userIndex]["isFree"] = true;
+            
+            fs.writeFileSync(__dirname + "/users.json", JSON.stringify(users));
+            console.log(`${newLineChar}'${user.claimant}' status was successfully updated!`);
+
+        }
     
+    });
+
 
 } catch (error) {
 
@@ -707,14 +712,14 @@ fs.readFile("users.json", "utf8", function (error, users) {
         });
 
 
-        fs.readFile("users.json", "utf8", function (error, users) {
+        fs.readFile(__dirname + "/users.json", "utf8", function (error, users) {
     
             if (error) throw error;
     
             users = JSON.parse(users);
-                    
             users[userIndex]["isFree"] = true;
-            fs.writeFileSync("users.json", JSON.stringify(users));
+            
+            fs.writeFileSync(__dirname + "/users.json", JSON.stringify(users));
             
             console.log(`${newLineChar}'${user.claimant}' status was successfully updated!`);
         });

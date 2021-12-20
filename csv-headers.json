@@ -31,14 +31,6 @@
     {"id": "skipReason", "title": "skipReason"}
   ],
 
-  "experience": [ 
-    {"id": "RecognizedByMachine", "title": "RecognizedByMachine"},
-    {"id": "RecognizedByHuman", "title": "RecognizedByHuman"},    
-    {"id": "Precedence", "title": "Precedence"},
-    {"id": "PositivePrecedence", "title": "PositivePrecedence"},
-    {"id": "NegativePrecedence", "title": "NegativePrecedence"}
-  ],
-
   "raw_verified" : [
     {"id": "CaseID", "title": "CaseID"},
     {"id": "DeloNum", "title": "DeloNum"},

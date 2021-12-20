@@ -22,7 +22,7 @@ module.exports.chronos = {
     think_time              : 3   * 1000,
     conditional_expectation : 20  * 1000,
     chunking_oscillation    : 10  * 1000,
-    chunking_max_limitation : 6000
+    chunking_max_limitation : 300
 
 };
 
@@ -52,8 +52,8 @@ module.exports.directory_tree = {
     
     input_path       : __dirname + '/input/',
     output_path      : __dirname + '/output/',
-    
 
+    
 
     get attachments_path(){
         return this.input_path + 'attachments/';
@@ -66,7 +66,7 @@ module.exports.directory_tree = {
     },
 
     get verified_data_path(){
-        return this.raw_data_path + 'verified_data/';
+        return this.input_path + 'verified_data/';
     },
 
 
@@ -76,7 +76,7 @@ module.exports.directory_tree = {
     },
 
     get enrichment_path(){
-        return this.storage_path + 'enrichment/';
+        return this.input_path + 'enrichment/';
     },
 
     get vault_path(){
@@ -113,6 +113,8 @@ module.exports.file_structure = {
     
     PoA_RSC        : 'PoA_RSC.pdf',
     enquiry_RSC    : 'enquiry_RSC.txt',
+
+    users_list     : 'users.json' 
 
 };
 
